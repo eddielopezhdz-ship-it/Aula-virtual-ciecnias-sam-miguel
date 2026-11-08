@@ -9,21 +9,29 @@
     "typecheck": "tsc --noEmit",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "export:index": "npm run build && node scripts/export-index.mjs"
+    "export:index": "npm run build && node scripts/export-index.mjs",
+    "test": "tsx --test tests/*.test.ts",
+    "bootstrap:admin": "node --env-file=.env.local scripts/bootstrap-admin.mjs"
   },
   "dependencies": {
+    "@supabase/ssr": "0.12.7",
+    "@supabase/supabase-js": "2.119.0",
     "lucide-react": "^0.468.0",
     "next": "^16.0.0",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "server-only": "0.0.1",
+    "zod": "4.6.7"
   },
   "devDependencies": {
+    "@electric-sql/pglite": "0.5.15",
     "@tailwindcss/postcss": "^4.1.0",
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "prettier": "3.9.10",
     "tailwindcss": "^4.1.0",
+    "tsx": "4.23.15",
     "typescript": "^5.9.0"
   }
 }

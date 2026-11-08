@@ -1,6 +1,6 @@
 # Desarrollo por etapas
 
-Cada etapa requiere aprobación antes de comenzar la siguiente. Esta entrega se limita a la etapa 1.
+Cada etapa requiere aprobación antes de comenzar la siguiente. La etapa 1 está conservada. La etapa 2 está implementada en el código y pendiente de conexión y verificación con un proyecto Supabase. No se ha iniciado la etapa 3.
 
 | Etapa                       | Alcance                                                                                        | Verificación necesaria                                                                    |
 | --------------------------- | ---------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |

@@ -9,7 +9,7 @@ const routeFiles = {
   "/biblioteca": "biblioteca.html",
   "/programacion": "programacion.html",
   "/evaluaciones": "evaluaciones.html",
-  "/login": "login.html",
+  "/login": "biblioteca.html",
 };
 const clean = (html) =>
   html
@@ -26,7 +26,25 @@ const clean = (html) =>
 const pages = {};
 let home;
 for (const [route, file] of Object.entries(routeFiles)) {
-  const html = clean(await readFile(path.join(output, file), "utf8"));
+  let html = clean(await readFile(path.join(output, file), "utf8"));
+  // Authentication requires the Next.js server. Never export a working-looking
+  // login form into a standalone file.
+  if (route === "/login") {
+    html = html
+      .replaceAll(
+        "Tu biblioteca de descubrimientos.",
+        "Acceso disponible en la aplicación conectada.",
+      )
+      .replaceAll("BIBLIOTECA DIGITAL", "ACCESO PRIVADO")
+      .replaceAll(
+        "Aquí encontrarás guías, infografías, lecturas y materiales publicados por tu docente.",
+        "Esta copia independiente no admite sesiones. Inicia la aplicación Next.js con Supabase para ingresar.",
+      )
+      .replaceAll(
+        "Esta sección se habilitará en una próxima etapa. Por ahora puedes conocer nuestra propuesta educativa en la página principal.",
+        "El acceso con cuentas está implementado en la aplicación Next.js y requiere un proyecto Supabase configurado. Este archivo es solo una presentación sin conexión.",
+      );
+  }
   pages[route] = html.match(/<body[^>]*>([\s\S]*)<\/body>/i)[1];
   if (route === "/") home = html;
 }
@@ -58,7 +76,7 @@ if (location.hash.startsWith('#/')) renderPage();
 const result = home
   .replace("</head>", `<style>${css}</style></head>`)
   .replace("</body>", `${navigation}</body>`);
-await writeFile("index.html", result);
+await writeFile(process.env.INDEX_OUTPUT || "index.html", result);
 console.log(
   "index.html generado: portada y cinco secciones, sin dependencias externas.",
 );

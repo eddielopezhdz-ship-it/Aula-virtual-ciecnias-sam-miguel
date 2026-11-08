@@ -1,0 +1,225 @@
+.auth-card {
+  max-width: 500px;
+  margin: 55px auto;
+  padding: 34px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+}
+.auth-card h1 {
+  font-size: 33px;
+}
+.auth-card > p {
+  font-size: 14px;
+  margin: 18px 0;
+}
+.auth-card > .text-link {
+  margin-top: 25px;
+}
+.auth-form {
+  display: grid;
+  gap: 20px;
+}
+.auth-form h2 {
+  font-size: 25px;
+}
+.auth-form label {
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.auth-form input {
+  width: 100%;
+  border: 1px solid #c6d3c8;
+  border-radius: 7px;
+  padding: 12px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  min-height: 46px;
+}
+.auth-form input:focus-visible {
+  outline: 3px solid #77a38a;
+}
+.auth-form input:disabled {
+  background: #f2f4ef;
+  cursor: not-allowed;
+}
+.auth-form .button {
+  font-size: 14px;
+  min-height: 46px;
+}
+.auth-hint {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #5f6e63;
+}
+.auth-hint svg {
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.auth-notice {
+  padding: 16px;
+  border: 1px solid #d8e3ce;
+  background: #f4f7ed;
+  color: #4c663d;
+  border-radius: 8px;
+  font-size: 14px;
+  margin: 20px 0;
+}
+.auth-error {
+  padding: 14px;
+  background: #fff0ed;
+  color: #8c3429;
+  border: 1px solid #e6b6ac;
+  border-radius: 7px;
+  font-size: 14px;
+}
+.auth-success {
+  padding: 16px;
+  background: #eff6e9;
+  border: 1px solid #c4d9b5;
+  border-radius: 7px;
+  overflow-wrap: anywhere;
+}
+.auth-success p {
+  margin-bottom: 10px;
+  color: #3c6039;
+  font-size: 14px;
+}
+.one-time-secret {
+  display: block;
+  user-select: all;
+  font-size: 16px;
+  background: #fff;
+  padding: 8px;
+  border-radius: 5px;
+  overflow-wrap: anywhere;
+}
+.dashboard {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  gap: 30px;
+  padding-top: 35px;
+  padding-bottom: 55px;
+  min-height: 500px;
+}
+.dashboard-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-self: start;
+}
+.dashboard-nav > a {
+  font-size: 14px;
+  padding: 10px 12px;
+  border-radius: 6px;
+}
+.dashboard-nav > a:hover {
+  background: var(--cream);
+}
+.dashboard-nav form {
+  margin-top: 20px;
+}
+.dashboard-nav .button {
+  font-size: 13px;
+  min-height: 44px;
+}
+.dashboard-content {
+  min-width: 0;
+}
+.dashboard-content > .auth-form {
+  padding: 25px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.dashboard-module {
+  display: block;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+.dashboard-grid .dashboard-module {
+  margin: 0;
+}
+.dashboard-module > svg {
+  display: block;
+  color: var(--green);
+  margin-bottom: 15px;
+}
+.dashboard-module h2 {
+  font-size: 22px;
+  margin: 15px 0;
+}
+.dashboard-module p {
+  font-size: 14px;
+  margin-bottom: 18px;
+  line-height: 1.8;
+}
+.dashboard-module .text-link {
+  font-size: 13px;
+}
+.account-list {
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+}
+.account-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+.account-list li span {
+  font-size: 12px;
+  color: #5f6e63;
+}
+@media (max-width: 760px) {
+  .auth-card {
+    margin: 30px 20px;
+    padding: 25px;
+  }
+  .auth-card h1 {
+    font-size: 30px;
+  }
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 20px;
+  }
+  .dashboard-nav form {
+    margin-top: 0;
+  }
+  .dashboard-nav > a {
+    border: 1px solid var(--line);
+    font-size: 12px;
+  }
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-module {
+    padding: 20px;
+  }
+  .account-list li {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+}

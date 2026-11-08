@@ -1,23 +1,24 @@
-# Guía inicial para el docente
+# Guía para el docente: etapa 2
 
-## Qué puede revisar ahora
+## Antes de ingresar
 
-Esta es la primera etapa del Aula Virtual de Ciencias Naturales.
+Un técnico o el propio administrador debe completar [la configuración de Supabase](SUPABASE.md). No hay cuentas predeterminadas. Mientras la conexión esté pendiente, el formulario de ingreso estará deshabilitado.
 
-1. En la portada, revise el nombre de la institución, el área y su nombre como docente.
-2. Explore las tarjetas de asignaturas y los accesos a biblioteca y programación.
-3. Pruebe el menú desde un celular. El botón de tres líneas abre los enlaces.
-4. El botón «Ingresar al aula» muestra un aviso de que el acceso se habilitará más adelante. Todavía no necesita una cuenta ni una contraseña.
-5. El espacio del escudo está marcado como temporal. No se ha usado un escudo inventado.
+## Ingresar y crear estudiantes
 
-## Funciones que llegarán después
+1. Usa «Ingresar al aula» y escribe el correo y la contraseña de tu cuenta docente.
+2. El panel muestra los módulos previstos. Solo la gestión básica de cuentas está disponible en esta etapa.
+3. En **Estudiantes**, escribe un nombre para mostrar y el correo de la cuenta. Usa únicamente datos ficticios durante las pruebas.
+4. Pulsa **Crear cuenta**. El sistema genera una contraseña aleatoria y la muestra en esa respuesta. Entrégala de forma privada; no la guardes en archivos públicos. No se puede volver a consultar desde el panel.
+5. El estudiante ingresa en la misma página y accede a su aula privada. No puede abrir el panel docente.
+6. Para salir, pulsa **Cerrar sesión**. En equipos compartidos utiliza además el cierre de la ventana del navegador y evita guardar contraseñas.
 
-Crear grados o grupos, registrar estudiantes, publicar asignaturas y unidades, subir guías, crear talleres y evaluaciones y consultar resultados todavía no está habilitado. Cada función se desarrollará y comprobará en su etapa.
+Se permiten hasta 30 solicitudes de creación por docente y hora. Si una operación falla, revisa el mensaje antes de repetirla. Si indica una cuenta sin perfil, pide al administrador técnico que revise Supabase Auth.
 
-La edición del escudo y de la identidad desde un panel también se realizará en una etapa posterior. En esta entrega la identidad es de presentación.
+## Qué todavía no se puede hacer
 
-## Antes de continuar
+Crear o asignar grupos desde formularios, publicar asignaturas, subir guías, crear talleres y evaluaciones o consultar calificaciones. Estas secciones indican que están pendientes; no guardan contenido académico.
 
-Revise los textos y el diseño. Para avanzar a la etapa 2, apruebe la implementación del acceso privado mediante Supabase. Las claves se configurarán mediante las variables seguras del entorno; no deben enviarse por chat.
+La importación CSV, la recuperación automatizada de contraseñas y la gestión avanzada de cuentas tampoco están incluidas. La portada, la identidad y el espacio temporal para el escudo oficial se conservan de la etapa 1.
 
-No cargue ni comparta datos reales de estudiantes en esta versión.
+La plataforma no se ha publicado en Internet. No incorpores información real de estudiantes hasta completar las pruebas conectadas y los procedimientos de privacidad de la institución.

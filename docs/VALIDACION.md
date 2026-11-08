@@ -25,3 +25,13 @@ No se ejecutaron pruebas de autenticación, permisos, carga de archivos, calific
 ## Index independiente
 
 Se generó `index.html` con estilos e ilustraciones incluidos y navegación entre las secciones informativas mediante fragmentos de URL. Chromium del entorno bloqueó la apertura de direcciones `file://`; la comprobación se realizó sirviendo el mismo archivo mediante un servidor HTTP local temporal, sin Next.js. Se probaron el menú móvil, biblioteca, regreso al inicio y acceso informativo, sin dependencias externas ni errores de JavaScript. La apertura directa desde el sistema de archivos no se pudo verificar en este entorno.
+
+## Etapa 2: autenticación y cuentas
+
+Se verificó la compilación de Next.js con rutas dinámicas privadas y `proxy.ts`, el tipado y el formato. Las pruebas aisladas cubren autorización de altas, validación, cuota, compensación ante errores y la migración SQL con RLS en PostgreSQL mediante PGlite. No se usaron datos reales ni un proyecto Supabase remoto.
+
+En Chromium se comprobaron la portada conservada y el formulario de acceso a 1440, 768, 390 y 320 px, sin desbordamiento; el formulario está deshabilitado sin conexión. Cinco rutas privadas redirigieron a `/login`; una cookie arbitraria no concedió acceso. Se verificó también el cierre sin sesión y el exportador independiente adaptado, sin errores de JavaScript.
+
+La portada, los estilos originales, las ilustraciones, la cabecera, el pie, la navegación y el `index.html` original coinciden con el commit `546b2ff`.
+
+**Pendiente de configuración externa:** login docente y estudiantil con Auth real, renovación de sesión, cierre con sesión real y alta de estudiantes a través de Supabase. No se consideran probados esos flujos remotos. Completar `docs/SUPABASE.md` y realizar sus comprobaciones antes de usar cuentas reales. No se realizó despliegue.
